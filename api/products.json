@@ -1,0 +1,13 @@
+{
+  "products": [
+    { "id": 1, "title": "Smartphone", "description": "O iPhone 20 é definitivamente um salto na tecnologia, com as novas funcionalidades muda muitos paradigmas", "image":"smartphone.png", "bigImage":"kindle-big.png","price":400},
+    { "id": 2, "title": "Notebook", "description": "O novo laptop da Asus tem uma proteção contra quedas, é resistente a água e pesa quase meio kilo", "image":"notebook.png", "bigImage":"notebook-big.png", "price":2300 },
+    { "id": 3, "title": "Câmera", "description": "A câmera profissional tem como principal vantagem a alta definição e a capacidade de se autoregular", "image":"camera.png", "bigImage":"camera-big.png", "price":1000 },
+    { "id": 4, "title": "Smartspeaker", "description": "Essa caixa de som aceita 4 pilhas AAA, ou uma bateria de litium, mas também pode usar cabo USB", "image":"smartspeaker.png", "bigImage":"kindle-big.png","price":400 },
+    { "id": 5, "title": "Pulseiras", "description": "Pulseiras de cores variadas de couro e de silicone", "image":"watch.png", "bigImage":"kindle-big.png","price":400 },
+    { "id": 6, "title": "Kindle", "description": "O mais famoso leitor de livros portátil, todos os modelos disponíveis", "image":"kindle.png", "bigImage":"kindle-big.png","price":400 },
+    { "id": 7, "title": "Miband", "description": "Miband é um relógio e uma pulseira que mede teus passos e a qualidade do teu sono", "image":"miband.png", "bigImage":"miband-big.png","price":250 },
+    { "id": 8, "title": "Siri", "description": "A Siri é uma assistente automática que pode integrar com diversos dispositivos", "image":"siri.png", "bigImage":"siri-big.png","price":360 },
+    { "id": 9, "title": "Mouse", "description": "Temos diversos mouses disponíveis, wifi, com cabo, gamer, mini, com bateria e com pilha ", "image":"mouse.png", "bigImage":"mouse-big.png","price":220 }
+  ]
+}
