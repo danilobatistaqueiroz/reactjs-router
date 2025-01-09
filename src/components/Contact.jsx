@@ -1,8 +1,8 @@
-import classes from './Contato.module.css'
+import classes from './Contact.module.css'
 import Header from './Header'
 import Footer from './Footer'
 
-const Contato = () => {
+const Contact = () => {
   return (
     <div style={{diplay:'flex'}}>
       <Header/>
@@ -31,4 +31,4 @@ const Contato = () => {
   )
 }
 
-export default Contato
+export default Contact

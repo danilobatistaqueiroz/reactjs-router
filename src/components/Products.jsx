@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import classes from './Produtos.module.css'
+import classes from './Products.module.css'
 import { useNavigate } from "react-router-dom";
 
 const Products = () => {
@@ -24,15 +24,17 @@ const Products = () => {
   if (!products) return null;
 
   return (
-    <div style={{marginLeft:'20px'}}>
-      <button className={classes.linkButton} onClick={() => navigate(-1)}>Voltar</button>
-      <button className={classes.linkButton} onClick={() => navigate("/contact")}>Contato</button>
-      <div style={{display:'flex',flexWrap:'wrap'}}>
+    <div style={{display:'flex',flexDirection:'column',alignContent:'center',flexWrap:'wrap'}}>
+      <div>
+        <button className={classes.linkButton} onClick={() => navigate(-1)}>Voltar</button>
+        <button className={classes.linkButton} onClick={() => navigate("/contact")}>Contato</button>
+      </div>
+      <div style={{display:'grid',alignItems:'center',alignContent:'center'}}>
       {
         products.map((p) => (
-          <div key={p.id} className={classes.items}>
-            <img style={{}} src={"/products/"+p.image} className={classes.product} onClick={()=> navigate(`/product/${p.id}`)}></img>
-            <h2 style={{paddingTop:0,marginTop:0}}>{p.title}</h2>
+          <div key={p.id} style={{display:'flex',flexDirection:'column',alignContent:'center',flexWrap:'wrap'}}>
+            <img style={{width:'200px'}} src={"/products/"+p.image} className={classes.product} onClick={()=> navigate(`/product/${p.id}`)}></img>
+            <h2 style={{paddingTop:0,marginTop:0,textAlign:'center'}}>{p.title}</h2>
           </div>
         ))
       }

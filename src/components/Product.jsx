@@ -4,14 +4,13 @@ import React from 'react'
 import axios from 'axios'
 import Footer from './Footer'
 
-function Produto() {
+function Product() {
   const { id } = useParams();
   const [product, setProduct] = React.useState(null);
 
   React.useEffect(()=>{
     async function getProducts(){
       try{
-        console.log(classes);
         const r = await axios.get(`http://localhost:8000/products/${id}`)
         setProduct(r?.data)
       } catch (e) {
@@ -47,4 +46,4 @@ function Produto() {
   )
 }
 
-export default Produto
+export default Product
