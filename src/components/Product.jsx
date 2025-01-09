@@ -31,16 +31,12 @@ function Product() {
   if(product === null) return null
 
   return (
-    <div style={{}}>
-      <div style={{}}>
-        <div style={{display:'flex'}}>
-          <img src={"/products/"+product.bigImage} className={classes.productImage}></img>
-          <div style={{marginLeft:'20px',maxWidth:'300px'}}>
-            <h2 style={{margin:'0 10px 0 0'}}>{product.title}</h2>
-            <p className={classes.price}>R$ {product.price}</p>
-            <p>{product.description}</p>
-          </div>
-        </div>
+    <div style={{display:'flex'}}>
+      <img src={"/products/"+product.bigImage} className={classes.productImage}></img>
+      <div style={{marginLeft:'20px',maxWidth:'300px'}}>
+        <h2 style={{margin:'0 10px 0 0'}}>{product.title}</h2>
+        <p className={classes.price}>R$ {product.price}</p>
+        <p>{product.description}</p>
       </div>
     </div>
   )
