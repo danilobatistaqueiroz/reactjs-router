@@ -9,3 +9,16 @@
 .contact {
   border-radius:8px;
 }
+
+.container{
+  flex:1;
+  display:flex;
+  margin-top:20px;
+}
+.section{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  margin-left:20px;
+  margin-top:20px;
+}

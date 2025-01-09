@@ -24,17 +24,17 @@ const Products = () => {
   if (!products) return null;
 
   return (
-    <div style={{display:'flex',flexDirection:'column',alignContent:'center',flexWrap:'wrap'}}>
+    <div className={classes.container}>
       <div>
         <button className={classes.linkButton} onClick={() => navigate(-1)}>Voltar</button>
         <button className={classes.linkButton} onClick={() => navigate("/contact")}>Contato</button>
       </div>
-      <div style={{display:'grid',alignItems:'center',alignContent:'center'}}>
+      <div className={classes.products}>
       {
         products.map((p) => (
-          <div key={p.id} style={{display:'flex',flexDirection:'column',alignContent:'center',flexWrap:'wrap'}}>
-            <img style={{width:'200px'}} src={"/products/"+p.image} className={classes.product} onClick={()=> navigate(`/product/${p.id}`)}></img>
-            <h2 style={{paddingTop:0,marginTop:0,textAlign:'center'}}>{p.title}</h2>
+          <div key={p.id} className={classes.product}>
+            <img src={"/products/"+p.image} className={classes.productImage} onClick={()=> navigate(`/product/${p.id}`)}></img>
+            <h2 className={classes.productTitle}>{p.title}</h2>
           </div>
         ))
       }

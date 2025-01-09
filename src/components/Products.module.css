@@ -1,46 +1,31 @@
-.hButton {
-  color: black;
-  background: #eee;
-  text-decoration: none;
-}
-.linkButton {
-  padding-top:7px;
-  padding-bottom:7px;
-  padding-left:11px;
-  padding-right:11px;
-  border-radius: 3px;
-  border-color: #ccc;
-  border-width: 1px;
-  border-style: hidden;
-  font-weight: bold;
-  font-size:16px;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  margin-left:10px;
-  margin-right:10px;
-  margin-bottom:20px;
-  margin-top:20px;
-}
-.linkButton:hover{
-  background-color: #ccc;
-  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.1),0 3px 3px 0 rgba(0,0,0,0.1);
-}
-.linkButton:active{
-  transform:translate(1px,1px);
-}
 
-.product:hover{
+.container{
+  display:flex;
+  flex-direction:column;
+  align-content:center;
+  flex-wrap:wrap;
+}
+.products{
+  display:grid;
+  align-items:center;
+  align-content:center;
+}
+.product{
+  display:flex;
+  flex-direction:column;
+  align-content:center;
+  flex-wrap:wrap;
+  width:200px;
+}
+.productImage:hover{
   box-shadow: 0 3px 3px 0 rgba(0,0,0,0.1),0 3px 3px 0 rgba(0,0,0,0.1);
 }
-.product:active{
+.productImage:active{
   box-shadow: 0 3px 3px 1px rgba(0,0,0,0.1),1px 3px 3px 1px rgba(0,0,0,0.1);
   transform:translate(1px,1px);
 }
-
-
-
-@media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ }
-@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
-@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
-@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
-@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
-@media (min-width:1281px) { /* hi-res laptops and desktops */ }
+.productTitle{
+  padding-top:0;
+  margin-top:0;
+  text-align:center;
+}

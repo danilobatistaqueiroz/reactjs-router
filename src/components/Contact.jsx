@@ -4,11 +4,11 @@ import Footer from './Footer'
 
 const Contact = () => {
   return (
-    <div style={{diplay:'flex'}}>
+    <div style={{display:'flex'}}>
       <Header/>
-      <div style={{flex:1,display:'flex',marginTop:'20px'}}>
+      <div className={classes.container}>
         <img src={"/contact-big.png"} className={classes.contact}></img>
-        <div style={{display:'flex',flexDirection:'column',gap:'10px',marginLeft:'20px',marginTop:'20px'}}>
+        <div className={classes.section}>
           <div style={{display:'flex'}}>
             <h3>Entre em contato</h3>
           </div>

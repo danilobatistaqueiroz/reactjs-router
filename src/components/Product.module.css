@@ -1,10 +1,16 @@
-.product{
-  
-}
 .product:hover{
   box-shadow: 0 3px 3px 0 rgba(0,0,0,0.1),0 3px 3px 0 rgba(0,0,0,0.1);
 }
 .product:active{
   box-shadow: 0 3px 3px 1px rgba(0,0,0,0.1),1px 3px 3px 1px rgba(0,0,0,0.1);
   transform:translate(1px,1px);
+}
+
+.price{
+  background-color:#86F954;
+  color:#006F00;
+  padding:6px 8px;
+  border-radius:3px;
+  display:inline-block;
+  margin:10px 0;
 }

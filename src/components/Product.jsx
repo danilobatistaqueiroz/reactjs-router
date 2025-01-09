@@ -1,4 +1,5 @@
-import classes from './Products.module.css'
+import classes from './Product.module.css'
+import header from './Header.module.css'
 import { NavLink, useParams } from 'react-router-dom'
 import React from 'react'
 import axios from 'axios'
@@ -24,15 +25,15 @@ function Product() {
   let error_msg = ""
   return (
     <div style={{marginLeft:'20px',marginTop:'30px'}}>
-      <NavLink className={classes.linkButton+' '+classes.hButton} to="/" end>Produtos</NavLink>
-      <NavLink className={classes.linkButton+' '+classes.hButton} to="/contact">Contato</NavLink>
+      <NavLink className={header.linkButton+' '+header.hButton} to="/" end>Produtos</NavLink>
+      <NavLink className={header.linkButton+' '+header.hButton} to="/contact">Contato</NavLink>
       <div style={{paddingTop:'10px'}}>
           {product && 
             <div style={{padding:'10px',display:'flex'}}>
               <img src={"/products/"+product.bigImage} className={classes.product}></img>
               <div style={{marginLeft:'20px',maxWidth:'300px'}}>
                 <h2 style={{margin:'0 10px 0 0'}}>{product.title}</h2>
-                <p style={{backgroundColor:"#86F954",color:"#006F00",padding:"6px 8px",borderRadius:"3px",display:"inline-block",margin:'10px 0'}}>R$ {product.price}</p>
+                <p className={classes.price}>R$ {product.price}</p>
                 <p>{product.description}</p>
               </div>
             </div>
