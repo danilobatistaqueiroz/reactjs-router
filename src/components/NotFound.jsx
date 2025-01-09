@@ -3,9 +3,9 @@ import Footer from './Footer'
 
 const NotFound = () => {
   return (
-    <div style={{display:'flex'}}>
+    <div style={{display:'flex',flexDirection:'column'}}>
       <Header/>
-      <div style={{flex:'1',display:'flex',marginTop:'20px'}}>NotFound</div>
+      <div>NotFound</div>
       <Footer/>
     </div>
   )

@@ -1,9 +1,10 @@
-import classes from './Product.module.css'
-import header from './Header.module.css'
-import { NavLink, useParams, useNavigate } from 'react-router-dom'
 import React from 'react'
 import axios from 'axios'
+import { NavLink, useParams, useNavigate } from 'react-router-dom'
+import classes from './Product.module.css'
+import header from './Header.module.css'
 import Footer from './Footer'
+import Loading from './Loading'
 
 function Product() {
   const { id } = useParams();
@@ -28,7 +29,7 @@ function Product() {
     getProducts()
   },[id])
 
-  if(loading) return <div>Carregando...</div>
+  if(loading) return <Loading/>
   if(error) return <p style="color:red">{error}</p>
   if(product === null) return null
 

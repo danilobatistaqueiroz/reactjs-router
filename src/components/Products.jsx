@@ -1,9 +1,10 @@
 import React from 'react'
 import axios from 'axios'
+import { useNavigate } from "react-router-dom";
 import classes from './Products.module.css'
 import Header from './Header'
 import Footer from './Footer'
-import { useNavigate } from "react-router-dom";
+import Loading from './Loading'
 
 const Products = () => {
 
@@ -29,7 +30,7 @@ const Products = () => {
     getProducts();
   },[])
 
-  if(loading) return <div>Carregando...</div>
+  if(loading) return <Loading/>
   if(error) return <p style="color:red">{error}</p>
   if(products === null) return null
 
