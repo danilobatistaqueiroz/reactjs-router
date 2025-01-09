@@ -11,7 +11,7 @@ const Header = () => {
       { pathname != '/contact' ?
         <button className={classes.linkButton} onClick={() => navigate("/contact")}>Contato</button>
       : <></> }
-      { pathname != '/product' ?
+      { pathname != '/products' && pathname != '/' ?
         <button className={classes.linkButton} onClick={() => navigate("/products")}>Produtos</button>
       : <></> }
     </div>

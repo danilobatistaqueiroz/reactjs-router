@@ -4,7 +4,7 @@ import Footer from './Footer'
 
 const Contact = () => {
   return (
-    <div style={{display:'flex'}}>
+    <div>
       <Header/>
       <div className={classes.container}>
         <img src={"/contact-big.png"} className={classes.contact}></img>

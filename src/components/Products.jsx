@@ -1,34 +1,41 @@
 import React from 'react'
 import axios from 'axios'
 import classes from './Products.module.css'
+import Header from './Header'
+import Footer from './Footer'
 import { useNavigate } from "react-router-dom";
 
 const Products = () => {
+
   const [products, setProducts] = React.useState(null);
-  let error_msg = ""
+  const [error, setError] = React.useState(null)
+  const [loading, setLoading] = React.useState(false)
+
   const navigate = useNavigate();
 
   React.useEffect(()=>{
     async function getProducts(){
       try{
+        setLoading(true)
         const r = await axios.get('http://localhost:8000/products')
         setProducts(r?.data)
       } catch (e) {
-        error_msg = "ocorreu um incoveniente ao listar os produtos"
+        setError("ocorreu um incoveniente ao listar os produtos")
         console.error(e)
+      } finally {
+          setLoading(false)
       }
     }
     getProducts();
   },[])
 
-  if (!products) return null;
+  if(loading) return <div>Carregando...</div>
+  if(error) return <p style="color:red">{error}</p>
+  if(products === null) return null
 
   return (
-    <div className={classes.container}>
-      <div>
-        <button className={classes.linkButton} onClick={() => navigate(-1)}>Voltar</button>
-        <button className={classes.linkButton} onClick={() => navigate("/contact")}>Contato</button>
-      </div>
+    <div>
+      <Header/>
       <div className={classes.products}>
       {
         products.map((p) => (
@@ -38,10 +45,8 @@ const Products = () => {
           </div>
         ))
       }
-      {
-        error_msg && <p style="color:red">{error_msg}</p>
-      }
       </div>
+      <Footer/>
     </div>
   )
 }

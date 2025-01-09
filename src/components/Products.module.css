@@ -1,21 +1,10 @@
-
-.container{
-  display:flex;
-  flex-direction:column;
-  align-content:center;
-  flex-wrap:wrap;
-}
 .products{
   display:grid;
-  align-items:center;
-  align-content:center;
+  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
 }
 .product{
-  display:flex;
-  flex-direction:column;
-  align-content:center;
-  flex-wrap:wrap;
-  width:200px;
+  align-self: center;
+  justify-self: center;
 }
 .productImage:hover{
   box-shadow: 0 3px 3px 0 rgba(0,0,0,0.1),0 3px 3px 0 rgba(0,0,0,0.1);
