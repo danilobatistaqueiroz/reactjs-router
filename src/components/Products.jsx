@@ -2,8 +2,6 @@ import React from 'react'
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
 import classes from './Products.module.css'
-import Header from './Header'
-import Footer from './Footer'
 import Loading from './Loading'
 
 const Products = () => {
@@ -36,7 +34,6 @@ const Products = () => {
 
   return (
     <div>
-      <Header/>
       <div className={classes.products}>
       {
         products.map((p) => (
@@ -47,7 +44,6 @@ const Products = () => {
         ))
       }
       </div>
-      <Footer/>
     </div>
   )
 }

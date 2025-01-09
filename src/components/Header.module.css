@@ -27,3 +27,6 @@
 .linkButton:active{
   transform:translate(1px,1px);
 }
+.linkButton:first-child{
+  margin-left: 0px;
+}

@@ -1,12 +1,7 @@
-import Header from './Header'
-import Footer from './Footer'
-
 const NotFound = () => {
   return (
-    <div style={{display:'flex',flexDirection:'column'}}>
-      <Header/>
+    <div>
       <div>NotFound</div>
-      <Footer/>
     </div>
   )
 }

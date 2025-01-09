@@ -1,11 +1,8 @@
 import classes from './Contact.module.css'
-import Header from './Header'
-import Footer from './Footer'
 
 const Contact = () => {
   return (
     <div>
-      <Header/>
       <div className={classes.container}>
         <img src={"/contact-big.png"} className={classes.contact}></img>
         <div className={classes.section}>
@@ -26,7 +23,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <Footer/>
     </div>
   )
 }
