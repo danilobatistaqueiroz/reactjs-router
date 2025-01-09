@@ -34,7 +34,7 @@ function Product() {
   if(product === null) return null
 
   return (
-    <div style={{marginLeft:'20px',marginTop:'30px'}}>
+    <div style={{margin:'0 auto',width:'fit-content'}}>
       <NavLink className={header.linkButton+' '+header.hButton} onClick={() => navigate(-1)}>Voltar</NavLink>
       <NavLink className={header.linkButton+' '+header.hButton} to="/" end>Produtos</NavLink>
       <NavLink className={header.linkButton+' '+header.hButton} to="/contact">Contato</NavLink>
